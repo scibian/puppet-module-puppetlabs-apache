@@ -1,0 +1,36 @@
+#!/bin/sh
+
+cd $ADTTMP
+
+#simple puppet file for apache2 installation
+cat <<EOF > init.pp
+class { 'apache':  }
+EOF
+
+#be sure that apache2 is not installed
+dpkg -s apache2 2>&1
+if [ $? -eq 0 ] ; then
+        echo "apache2 package already installed. abort."
+        exit 1
+fi
+echo "apache2 not installed. good."
+
+#do puppet magic
+puppet apply --debug init.pp 2>&1
+
+#apache2 should be installed
+dpkg -s apache2 2>&1
+if [ $? -ne 0 ] ; then
+        echo "apache2 package not installed. abort."
+        exit 1
+fi
+echo "apache2 installed now. good."
+
+#apache2 should be running
+#pgrep apache2
+#if [ $? -ne 0 ] ; then
+#        echo "apache2 service not running. abort."
+#        exit 1
+#fi
+
+exit 0
