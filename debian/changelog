@@ -1,3 +1,9 @@
+puppet-module-puppetlabs-apache (1.10.0-1scibian1~bpo8+1) unstable; urgency=medium
+
+  * Backport to Scibian8
+
+ -- Benoit Boccard <benoit-externe.boccard@edf.fr>  Tue, 13 Dec 2016 15:02:56 +0200
+
 puppet-module-puppetlabs-apache (1.10.0-1) unstable; urgency=medium
 
   * Imported upstream relase 1.10.0
