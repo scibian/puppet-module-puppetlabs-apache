@@ -1,3 +1,9 @@
+puppet-module-puppetlabs-apache (1.10.0-1sci8u2) scibian8; urgency=medium
+
+  * Change dependency puppet (>=4) with puppet4.
+
+ -- Benoit Boccard <benoit-externe.boccard@edf.fr>  Thu, 14 Feb 2019 16:55:30 +0100
+
 puppet-module-puppetlabs-apache (1.10.0-1sci8u1) scibian8; urgency=medium
 
   * Scibian8 rebuild.
