@@ -3,7 +3,6 @@
 # Base class for clarity:
 class { 'apache': }
 
-
 # Exaple parameter usage:
 apache::mod { 'testmod':
   path => '/usr/some/path/mod_testmod.so',

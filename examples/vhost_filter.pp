@@ -14,4 +14,3 @@ apache::vhost { 'readme.example.net':
     'FilterProtocol  COMPRESS  DEFLATE change=yes;byteranges=no',
   ],
 }
-
