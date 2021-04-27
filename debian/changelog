@@ -1,3 +1,11 @@
+puppet-module-puppetlabs-apache (6.0.0-1sci9u1) scibian9; urgency=medium
+
+  * New upstream version 6.0.0-1sci9u1
+  * ignore debian/files right now
+  * add dependance to puppet5 instead of puppet
+
+ -- Kwame AMEDODJI <kwame-externe.amedodji@edf.fr>  Tue, 27 Apr 2021 13:23:34 +0200
+
 puppet-module-puppetlabs-apache (1.10.0-1sci9u1) scibian9; urgency=medium
 
   * Scibian9 rebuild. 
