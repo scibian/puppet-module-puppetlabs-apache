@@ -14,7 +14,7 @@ Homepage: https://forge.puppet.com/puppetlabs/apache
 Package: puppet-module-puppetlabs-apache
 Architecture: all
 Depends: ${misc:Depends},
-         puppet5 | puppet5-common
+         puppet5 | puppet5-common,
          puppet-module-puppetlabs-stdlib,
          puppet-module-puppetlabs-concat
 Description: Puppet module for apache
