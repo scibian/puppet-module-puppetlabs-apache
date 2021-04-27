@@ -3,7 +3,7 @@ Maintainer: Scibian Project <packaging@scibian.org>
 Uploaders: Stig Sandbeck Mathisen <ssm@debian.org>,
            Thomas Bechtold <toabctl@debian.org>
 Section: admin
-Testsuite: autopkgtest
+#Testsuite: autopkgtest
 Priority: optional
 Build-Depends: debhelper (>= 8)
 Standards-Version: 3.9.8
@@ -14,7 +14,7 @@ Homepage: https://forge.puppet.com/puppetlabs/apache
 Package: puppet-module-puppetlabs-apache
 Architecture: all
 Depends: ${misc:Depends},
-         puppet (>= 4) | puppet-common (>= 3),
+         puppet5 | puppet5-common
          puppet-module-puppetlabs-stdlib,
          puppet-module-puppetlabs-concat
 Description: Puppet module for apache
