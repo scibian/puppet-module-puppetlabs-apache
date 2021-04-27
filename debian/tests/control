@@ -1,3 +1,0 @@
-Tests: install
-Depends: @, puppet
-Restrictions: needs-root
