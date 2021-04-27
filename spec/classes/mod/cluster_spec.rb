@@ -1,30 +1,21 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
-describe 'apache::mod::cluster', :type => :class do
+describe 'apache::mod::cluster', type: :class do
   context 'on a RedHat OS Release 7 with mod version = 1.3.0' do
-    let :facts do
+    include_examples 'RedHat 7'
+
+    let(:params) do
       {
-        :osfamily               => 'RedHat',
-        :operatingsystemrelease => '7',
-        :concat_basedir         => '/dne',
-        :operatingsystem        => 'RedHat',
-        :id                     => 'root',
-        :kernel                 => 'Linux',
-        :path                   => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
-        :is_pe                  => false,
+        allowed_network: '172.17.0',
+        balancer_name: 'mycluster',
+        ip: '172.17.0.1',
+        version: '1.3.0',
       }
     end
 
-    let(:params) {
-      {
-        :allowed_network         => '172.17.0',
-        :balancer_name           => 'mycluster',
-        :ip                      => '172.17.0.1',
-        :version                 => '1.3.0'
-      }
-    }
-
-    it { is_expected.to contain_class("apache") }
+    it { is_expected.to contain_class('apache') }
     it { is_expected.to contain_apache__mod('proxy') }
     it { is_expected.to contain_apache__mod('proxy_ajp') }
     it { is_expected.to contain_apache__mod('manager') }
@@ -36,27 +27,16 @@ describe 'apache::mod::cluster', :type => :class do
   end
 
   context 'on a RedHat OS Release 7 with mod version > 1.3.0' do
-    let :facts do
+    include_examples 'RedHat 7'
+
+    let(:params) do
       {
-        :osfamily               => 'RedHat',
-        :operatingsystemrelease => '7',
-        :concat_basedir         => '/dne',
-        :operatingsystem        => 'RedHat',
-        :id                     => 'root',
-        :kernel                 => 'Linux',
-        :path                   => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
-        :is_pe                  => false,
+        allowed_network: '172.17.0',
+        balancer_name: 'mycluster',
+        ip: '172.17.0.1',
+        version: '1.3.1',
       }
     end
-
-    let(:params) {
-      {
-        :allowed_network         => '172.17.0',
-        :balancer_name           => 'mycluster',
-        :ip                      => '172.17.0.1',
-        :version                 => '1.3.1'
-      }
-    }
 
     it { is_expected.to contain_class('apache') }
     it { is_expected.to contain_apache__mod('proxy') }
@@ -70,27 +50,16 @@ describe 'apache::mod::cluster', :type => :class do
   end
 
   context 'on a RedHat OS Release 6 with mod version < 1.3.0' do
-    let :facts do
+    include_examples 'RedHat 6'
+
+    let(:params) do
       {
-        :osfamily               => 'RedHat',
-        :operatingsystemrelease => '6',
-        :concat_basedir         => '/dne',
-        :operatingsystem        => 'RedHat',
-        :id                     => 'root',
-        :kernel                 => 'Linux',
-        :path                   => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
-        :is_pe                  => false,
+        allowed_network: '172.17.0',
+        balancer_name: 'mycluster',
+        ip: '172.17.0.1',
+        version: '1.2.0',
       }
     end
-
-    let(:params) {
-      {
-        :allowed_network         => '172.17.0',
-        :balancer_name           => 'mycluster',
-        :ip                      => '172.17.0.1',
-        :version                 => '1.2.0'
-      }
-    }
 
     it { is_expected.to contain_class('apache') }
     it { is_expected.to contain_apache__mod('proxy') }
