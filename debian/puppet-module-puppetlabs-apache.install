@@ -3,3 +3,5 @@ files usr/share/puppet/modules.available/puppetlabs-apache
 templates usr/share/puppet/modules.available/puppetlabs-apache
 manifests usr/share/puppet/modules.available/puppetlabs-apache
 lib usr/share/puppet/modules.available/puppetlabs-apache
+tasks usr/share/puppet/modules.available/puppetlabs-apache
+types usr/share/puppet/modules.available/puppetlabs-apache
