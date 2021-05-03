@@ -1,3 +1,10 @@
+puppet-module-puppetlabs-apache (6.0.0-1sci9u3) scibian9; urgency=medium
+
+  * fix typo error in depends
+  * add tasks & types entries in install files
+
+ -- Kwame AMEDODJI <kwame-externe.amedodji@edf.fr>  Thu, 29 Apr 2021 14:38:10 +0200
+
 puppet-module-puppetlabs-apache (6.0.0-1sci9u2) scibian9; urgency=medium
 
   * suppress tests/control to fix autopkgtest issue
